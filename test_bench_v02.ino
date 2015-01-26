@@ -179,7 +179,7 @@ void loop()
 //--- function name     : Init_Chip
 //--- entrée - sortie 	: - / - 
 //--- Creation Date     : 10.12.2014
-//--- Modification Date : 06.01.2015
+//--- Modification Date : 24.01.2015
 //--- Version           : V01
 //--- description 	: initialisation bus SPI with the Chip IC CDP68HC68
 //--- remark	        : http://arduino.cc/en/Reference/SPI
@@ -200,7 +200,7 @@ void Init_Chip_SPI()
   SPI.setBitOrder(MSBFIRST); 
 
   //--- configuration of side (rising or ebbing) on SCK signal ---//
-  SPI.setDataMode(0);              // SPI_MODE0 rising edge - CPOL 
+  SPI.setDataMode(SPI_MODE1);              // SPI_MODE0 rising edge - CPOL 
                                    // activation of start SCK - CPHA 
   
   //--- configuration of frequency (SCK) ---//
